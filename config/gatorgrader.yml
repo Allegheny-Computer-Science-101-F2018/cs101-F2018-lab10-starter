@@ -1,0 +1,35 @@
+---
+name: cmpsc-100-fall-2018-lab10
+break: true
+indent: 4
+---
+# note that without an "--exact" the check is an "at least"
+# --> check the technical writing
+# mdl is a Markdown linting tool
+# proselint checks writing for common mistakes
+writing/proposal.md:
+    mdl
+    proselint
+    --fragment "##" --count 5 --exact
+    --paragraphs 4 --exact
+    --words 50
+writing/reflection.md:
+    mdl
+    proselint
+    --fragment "##" --count 3 --exact
+    --paragraphs 3 --exact
+    --words 100
+writing/report.md:
+    mdl
+    proselint
+    --fragment "##" --count 3 --exact
+    --paragraphs 3 --exact
+    --words 100
+writing/update.md:
+    mdl
+    proselint
+    --fragment "##" --count 2 --exact
+    --paragraphs 2 --exact
+    --words 100
+# --> check the number of commits beyond a threshold
+--commits 10
